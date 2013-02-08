@@ -1,0 +1,92 @@
+    <div id="navigation">
+    <div class="navbar navbar-inverse navbar-fixed-top">
+      <div class="navbar-inner">
+        <div class="container">
+          <a class="btn btn-navbar" data-toggle="collapse" data-target=".nav-collapse">
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+          </a>
+          <a class="brand" href="../welcome/index" >OSC</a>
+          <div class="nav-collapse collapse">
+            <ul class="nav">
+              <li><a href="about" >About Us</a></li>
+              <li class="dropdown">
+                <a href="#" class="dropdown-toggle" data-toggle="dropdown" >Join In <b class="caret"></b></a>
+                <ul class="dropdown-menu">
+                  <li><a href="sessions" >Club Sessions</a></li>             
+                  <li><a href="holidays" >Club Holidays</a></li>
+                  <li><a href="social" >Social Activities</a></li>
+                  <li><a href="racing" >Racing Team</a></li>
+                </ul>
+               </li>
+               <li class="dropdown">
+                <a href="#" class="dropdown-toggle" data-toggle="dropdown" >Information <b class="caret"></b></a>
+                <ul class="dropdown-menu">
+                  <li><a href="faq" >FAQ</a></li>
+                  <li><a href="contact" >Contact Us</a></li>
+                </ul>
+                <li><a href="../announcements" >Announcements</a></li>
+               </li>
+                </div>
+            </ul>
+            </li>
+            </ul>
+            <form class="navbar-form pull-right">
+              <input class="span2" type="text" placeholder="Email">
+              <input class="span2" type="password" placeholder="Password">
+              <a href="index" class="btn">Sign In</a>
+            </form>
+            </div>
+        </div>
+      </div>
+    </div>
+
+<%- model_class = Announcement -%>
+<div class="page-header">
+  <h1><%=t '.title', :default => model_class.model_name.human.pluralize %></h1>
+</div>
+<table class="table table-striped">
+  <thead>
+    <tr>
+      <th><%= model_class.human_attribute_name(:id) %></th>
+      <th><%= model_class.human_attribute_name(:title) %></th>
+      <th><%= model_class.human_attribute_name(:body) %></th>
+      <th><%= model_class.human_attribute_name(:created_at) %></th>
+      <th><%=t '.actions', :default => t("helpers.actions") %></th>
+    </tr>
+  </thead>
+  <tbody>
+    <% @announcements.each do |announcement| %>
+      <tr>
+        <td><%= link_to announcement.id, announcement_path(announcement) %></td>
+        <td><%= announcement.title %></td>
+        <td><%= announcement.body %></td>
+        <td><%=l announcement.created_at %></td>
+        <td>
+          <%= link_to t('.edit', :default => t("helpers.links.edit")),
+                      edit_announcement_path(announcement), :class => 'btn btn-mini' %>
+          <%= link_to t('.destroy', :default => t("helpers.links.destroy")),
+                      announcement_path(announcement),
+                      :method => :delete,
+                      :data => { :confirm => t('.confirm', :default => t("helpers.links.confirm", :default => 'Are you sure?')) },
+                      :class => 'btn btn-mini btn-danger' %>
+        </td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<%= link_to t('.new', :default => t("helpers.links.new")),
+            new_announcement_path,
+            :class => 'btn btn-primary' %>
+
+
+<script>
+$(function(){
+$('.dropdown-toggle').dropdown();
+$('.dropdown input, .dropdown label').click(function (e) {
+e.stopPropagation();
+});
+});
+</script>
