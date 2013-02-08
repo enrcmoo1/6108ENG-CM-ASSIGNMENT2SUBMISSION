@@ -2,24 +2,23 @@
 <html lang="en">
   <head>
     <meta charset="utf-8">
-    
-    <title>About Us</title>
+    <title>Oval Ski Club | Home</title>
     <%= stylesheet_link_tag    "application", :media => "all" %>
     <%= javascript_include_tag "application" %>
     <%= csrf_meta_tags %>
-
+    <!--custom css file and bootstrap files are imported below -->
     <link href="../assets/bootstrap.css" rel="stylesheet">
     <link href="../assets/mycustomcss.css" rel="stylesheet">
-
     <style type="text/css">
       body
       {
-      
+      padding-top: 60px;
+      padding-bottom: 40px;
       }
     </style>
     <link href="assets/css/bootstrap-responsive.css" rel="stylesheet">
   </head>
-
+  <!-- Navigation Bar Coding -->
   <body>
     <div id="navigation">
     <div class="navbar navbar-inverse navbar-fixed-top">
@@ -30,17 +29,18 @@
             <span class="icon-bar"></span>
             <span class="icon-bar"></span>
           </a>
-          <a class="brand" href="index" >OSC</a>
+          <a class="brand" href="index" >Oval Ski Club</a>
           <div class="nav-collapse collapse">
             <ul class="nav">
               <li><a href="about" >About Us</a></li>
               <li class="dropdown">
                 <a href="#" class="dropdown-toggle" data-toggle="dropdown" >Join In <b class="caret"></b></a>
                 <ul class="dropdown-menu">
-                  <li><a href="../events" >Club Sessions</a></li>             
+                  <li><a href="sessions" >Club Sessions</a></li>             
                   <li><a href="holidays" >Club Holidays</a></li>
                   <li><a href="social" >Social Activities</a></li>
                   <li><a href="racing" >Racing Team</a></li>
+                  <li><a href="../events" >Events</a></li>
                 </ul>
                </li>
                <li class="dropdown">
@@ -55,6 +55,7 @@
             </ul>
             </li>
             </ul>
+            <!-- Navigation Bar Login Form -->
             <form class="navbar-form pull-right">
               <input class="span2" type="text" placeholder="Email">
               <input class="span2" type="password" placeholder="Password">
@@ -64,12 +65,14 @@
         </div>
       </div>
     </div>
+    <!-- Image Banner -->
     <center>
     <img src="../assets/ovalskiclub.jpg" width="940" height="180" title="Welcome to the Oval Ski Club website">
-    <div class="container">
     </center>
 </div>
+<div class="container">
 <hr>
+<!-- Oval Ski Club updates coded using div containers, hero-units and accordions -->
       <div class="container">
       <div class="hero-unit">
         <h2>Updates</h2>
@@ -82,11 +85,18 @@
         <br>
         Contact Andy Kearney on 07855662891 for further details or to book your place.
       </div>
-
+    </div>
       <div class="container">
-      <div class="hero-unit">
         <h2>Upcoming events this week</h2>
+      <div class="accordion" id="accordion2">
+  <div class="accordion-group">
+    <div class="accordion-heading">
+      <a class="accordion-toggle" data-toggle="collapse" data-parent="#accordion2" href="#collapseOne">
         <h3>Saturday 9/2/2013</h3>
+      </a>
+    </div>
+    <div id="collapseOne" class="accordion-body collapse in">
+      <div class="accordion-inner">
         <h4>10:00am - 11:00am</h4>
         Junior Club for under 11's. New beginners lessons start!<br>
         Junior beginners under 11 years are welcome to enrol for new block of lessons
@@ -94,10 +104,17 @@
         Junior Club for 11+. New beginners lessons start<br>
         Juniors beginners 11yrs+ welcome to enrol for new block of lessons
       </div>
+    </div>
+  </div>
 
-      <div class="container">
-      <div class="hero-unit">
+  <div class="accordion-group">
+    <div class="accordion-heading">
+      <a class="accordion-toggle" data-toggle="collapse" data-parent="#accordion2" href="#collapseTwo">
         <h3>Sunday 10/2/2013</h3>
+      </a>
+    </div>
+    <div id="collapseTwo" class="accordion-body collapse">
+      <div class="accordion-inner">
         <h4>5:00pm - 6:00pm</h4>
         Adult Club - beginners lessons (week 1 of 3)
         <h4>6:00pm - 7:00pm</h4>
@@ -105,11 +122,14 @@
         <h4>7:00pm - 8:00pm</h4>
         Adult Club - intermediate/advanced lessons
       </div>
+    </div>
+  </div>
+</div>
 
 <%= yield %>
       <hr>
-
       <footer>
+      <!-- Links to Facebook and Twitter -->
       <center>&copy; Oval Ski Club 2012 &nbsp</center>
       <a href="http://www.facebook.com/group.php?gid=2256597544"><img src="../assets/facebooklogo.png" width="55" height="25" title="Like us on Facebook"><a href="https://twitter.com/OvalSki"><img src="../assets/twitter.png" width="55" height="25" title="Follow us on Twitter"></a></a>
       </footer>
@@ -125,9 +145,6 @@
 <html>
 <head>
   <title>Store</title>
-  <!--[if lt IE 9]>
-    <script src="http://html5shim.googlecode.com/svn/trunk/html5.js" type="text/javascript"></script>
-  <![endif]-->
   <%= stylesheet_link_tag    "application", :media => "all" %>
   <%= javascript_include_tag "application" %>
   <%= csrf_meta_tags %>

@@ -1,3 +1,25 @@
+    <!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <title>Oval Ski Club | Announcements</title>
+    <%= stylesheet_link_tag    "application", :media => "all" %>
+    <%= javascript_include_tag "application" %>
+    <%= csrf_meta_tags %>
+    <!--custom css file and bootstrap files are imported below -->
+    <link href="../assets/bootstrap.css" rel="stylesheet">
+    <link href="../assets/mycustomcss.css" rel="stylesheet">
+    <style type="text/css">
+      body
+      {
+      padding-top: 60px;
+      padding-bottom: 40px;
+      }
+    </style>
+    <link href="assets/css/bootstrap-responsive.css" rel="stylesheet">
+  </head>
+  <!-- Navigation Bar Coding -->
+  <body>
     <div id="navigation">
     <div class="navbar navbar-inverse navbar-fixed-top">
       <div class="navbar-inner">
@@ -7,24 +29,25 @@
             <span class="icon-bar"></span>
             <span class="icon-bar"></span>
           </a>
-          <a class="brand" href="../welcome/index" >OSC</a>
+          <a class="brand" href="../welcome/index" >Oval Ski Club</a>
           <div class="nav-collapse collapse">
             <ul class="nav">
-              <li><a href="about" >About Us</a></li>
+              <li><a href="../welcome/about" >About Us</a></li>
               <li class="dropdown">
                 <a href="#" class="dropdown-toggle" data-toggle="dropdown" >Join In <b class="caret"></b></a>
                 <ul class="dropdown-menu">
-                  <li><a href="sessions" >Club Sessions</a></li>             
-                  <li><a href="holidays" >Club Holidays</a></li>
-                  <li><a href="social" >Social Activities</a></li>
-                  <li><a href="racing" >Racing Team</a></li>
+                  <li><a href="../welcome/sessions" >Club Sessions</a></li>
+                  <li><a href="../welcome/holidays" >Club Holidays</a></li>
+                  <li><a href="../welcome/social" >Social Activities</a></li>
+                  <li><a href="../welcome/racing" >Racing Team</a></li>
+                  <li><a href="../events" >Events</a></li>
                 </ul>
                </li>
                <li class="dropdown">
                 <a href="#" class="dropdown-toggle" data-toggle="dropdown" >Information <b class="caret"></b></a>
                 <ul class="dropdown-menu">
-                  <li><a href="faq" >FAQ</a></li>
-                  <li><a href="contact" >Contact Us</a></li>
+                  <li><a href="../welcome/faq" >FAQ</a></li>
+                  <li><a href="../welcome/contact" >Contact Us</a></li>
                 </ul>
                 <li><a href="../announcements" >Announcements</a></li>
                </li>
@@ -41,7 +64,15 @@
         </div>
       </div>
     </div>
-
+        <!-- Image Banner -->
+    <center>
+    <img src="../assets/headerImage12.jpg" width="940" height="180" title="Welcome to the Oval Ski Club website">
+    <div class="container">
+    </center>
+</div>
+<div class="container">
+<hr>
+<div class="container">
 <%- model_class = Announcement -%>
 <div class="page-header">
   <h1><%=t '.title', :default => model_class.model_name.human.pluralize %></h1>
@@ -76,12 +107,31 @@
     <% end %>
   </tbody>
 </table>
-
-<%= link_to t('.new', :default => t("helpers.links.new")),
+<center>
+<%= link_to t('.new', :default => t("helpers.links.create new announcement")),
             new_announcement_path,
             :class => 'btn btn-primary' %>
+            </center>
+
+      <hr>
+      <footer>
+      <!-- Links to Facebook and Twitter -->
+      <center>&copy; Oval Ski Club 2012 &nbsp</center>
+      <a href="http://www.facebook.com/group.php?gid=2256597544"><img src="../assets/facebooklogo.png" width="55" height="25" title="Like us on Facebook"><a href="https://twitter.com/OvalSki"><img src="../assets/twitter.png" width="55" height="25" title="Follow us on Twitter"></a></a>
+      </footer>
+    </div>
+
+    <script text/javascript src="assets/js/jquery-1.8.2.min.js"></script>
+    <script text/javascript src="assets/js/bootstrap.min.js"></script>
+
+  </body>
+</html>
 
 
+<script text/javascript src="../assets/jquery-1.8.2.min.js"></script>
+<script text/javascript src="../assets/bootstrap.min.js"></script>
+<script text/javascript src="assets/js/jquery-1.8.2.min.js"></script>
+<script text/javascript src="assets/js/bootstrap.min.js"></script>
 <script>
 $(function(){
 $('.dropdown-toggle').dropdown();

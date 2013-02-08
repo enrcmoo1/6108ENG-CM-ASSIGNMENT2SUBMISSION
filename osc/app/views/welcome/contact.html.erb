@@ -2,24 +2,23 @@
 <html lang="en">
   <head>
     <meta charset="utf-8">
-    
-    <title>About Us</title>
+    <title>Oval Ski Club | Contact Us</title>
     <%= stylesheet_link_tag    "application", :media => "all" %>
     <%= javascript_include_tag "application" %>
     <%= csrf_meta_tags %>
-
+    <!--custom css file and bootstrap are imported below -->
     <link href="../assets/bootstrap.css" rel="stylesheet">
     <link href="../assets/mycustomcss.css" rel="stylesheet">
-
     <style type="text/css">
       body
       {
-      
+      padding-top: 60px;
+      padding-bottom: 40px;
       }
     </style>
     <link href="assets/css/bootstrap-responsive.css" rel="stylesheet">
   </head>
-
+  <!-- Navigation Bar Coding -->
   <body>
     <div id="navigation">
     <div class="navbar navbar-inverse navbar-fixed-top">
@@ -41,6 +40,7 @@
                   <li><a href="holidays" >Club Holidays</a></li>
                   <li><a href="social" >Social Activities</a></li>
                   <li><a href="racing" >Racing Team</a></li>
+                  <li><a href="../events" >Events</a></li>
                 </ul>
                </li>
                <li class="dropdown">
@@ -49,12 +49,13 @@
                   <li><a href="faq" >FAQ</a></li>
                   <li><a href="contact" >Contact Us</a></li>
                 </ul>
-                <li><a href="events" >Announcements</a></li>
+                <li><a href="../announcements" >Announcements</a></li>
                </li>
                 </div>
             </ul>
             </li>
             </ul>
+            <!-- Login Form -->
             <form class="navbar-form pull-right">
               <input class="span2" type="text" placeholder="Email">
               <input class="span2" type="password" placeholder="Password">
@@ -65,10 +66,13 @@
     </div>
     </div>
     <center>
+    <!-- Image Banner -->
     <img src="../assets/headerImage7.jpg" width="940" height="180" title="A picture from our club holiday in 2007"/>
     <div class="container">
     </center>
     </div>
+    <!-- Contact information using div containers and hero-units -->
+    <div class="container">
     <hr>
     <div class="container">
       <div class="hero-unit">
@@ -114,10 +118,13 @@
         We are at the ski hut located towards the rear of the Oval Sports Centre. Please ask at the sports centre reception for directions if you can’t find us.<br>
         <br>
         We are open Saturday Mornings and Sunday Evenings throughout the skiing season (see our <a href="sessions">sessions</a> page for more information).</p>
+        <!-- Coding for Google Maps -->
+        <center><iframe width="580" height="420" frameborder="0" scrolling="no" marginheight="0" marginwidth="0" src="https://maps.google.co.uk/maps?f=q&source=s_q&hl=en&geocode=&q=oval+sports+center&aq=&sll=52.9718,-2.779541&sspn=1.875643,5.410767&t=h&ie=UTF8&hq=oval+sports+center&hnear=&ll=53.357621,-3.011541&spn=0.012294,0.027466&z=15&output=embed"></iframe><br /><small><a href="https://maps.google.co.uk/maps?f=q&source=embed&hl=en&geocode=&q=oval+sports+center&aq=&sll=52.9718,-2.779541&sspn=1.875643,5.410767&t=h&ie=UTF8&hq=oval+sports+center&hnear=&ll=53.357621,-3.011541&spn=0.012294,0.027466&z=15" style="color:#0000FF;text-align:center"><a href="https://maps.google.co.uk/maps?f=q&source=embed&hl=en&geocode=&q=oval+sports+center&aq=&sll=52.9718,-2.779541&sspn=1.875643,5.410767&t=h&ie=UTF8&hq=oval+sports+center&hnear=&ll=53.357621,-3.011541&spn=0.012294,0.27466&z=15">Google Maps</a></a></small></center>
       </div>
       <hr>
 
       <footer>
+      <!-- Links to Facebook and Twitter -->
       <center>&copy; Oval Ski Club 2012 &nbsp</center>
       <a href="http://www.facebook.com/group.php?gid=2256597544"><img src="../assets/facebooklogo.png" width="55" height="25" title="Like us on Facebook"><a href="https://twitter.com/OvalSki"><img src="../assets/twitter.png" width="55" height="25" title="Follow us on Twitter"></a></a>
       </footer>
@@ -138,5 +145,9 @@ e.stopPropagation();
 });
 </script>
 
-  </body>
+
+<%=yield%>
+
+</body>
 </html>
+

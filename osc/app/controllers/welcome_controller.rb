@@ -5,9 +5,6 @@ class WelcomeController < ApplicationController
   def about
   end
 
-  def access
-  end
-
   def holidays
   end
 

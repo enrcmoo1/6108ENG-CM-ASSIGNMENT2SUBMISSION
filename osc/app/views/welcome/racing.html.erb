@@ -2,24 +2,23 @@
 <html lang="en">
   <head>
     <meta charset="utf-8">
-    
-    <title>About Us</title>
+    <title>Oval Ski Club | Racing Team</title>
     <%= stylesheet_link_tag    "application", :media => "all" %>
     <%= javascript_include_tag "application" %>
     <%= csrf_meta_tags %>
-
+    <!--custom css file and bootstrap are imported below -->
     <link href="../assets/bootstrap.css" rel="stylesheet">
     <link href="../assets/mycustomcss.css" rel="stylesheet">
-
     <style type="text/css">
       body
       {
-      
+      padding-top: 60px;
+      padding-bottom: 40px;
       }
     </style>
     <link href="assets/css/bootstrap-responsive.css" rel="stylesheet">
   </head>
-
+  <!-- Navigation Bar Coding -->
   <body>
     <div id="navigation">
     <div class="navbar navbar-inverse navbar-fixed-top">
@@ -41,6 +40,7 @@
                   <li><a href="holidays" >Club Holidays</a></li>
                   <li><a href="social" >Social Activities</a></li>
                   <li><a href="racing" >Racing Team</a></li>
+                  <li><a href="../events" >Events</a></li>
                 </ul>
                </li>
                <li class="dropdown">
@@ -49,12 +49,13 @@
                   <li><a href="faq" >FAQ</a></li>
                   <li><a href="contact" >Contact Us</a></li>
                 </ul>
-                <li><a href="events" >Announcements</a></li>
+                <li><a href="../announcements" >Announcements</a></li>
                </li>
                 </div>
             </ul>
             </li>
             </ul>
+            <!-- Login Form -->
             <form class="navbar-form pull-right">
               <input class="span2" type="text" placeholder="Email">
               <input class="span2" type="password" placeholder="Password">
@@ -65,11 +66,13 @@
       </div>
     </div>
     <center>
+    <!-- Image Banner -->
     <img src="../assets/headerImage9.jpg" width="940" height="180" title="A picture of the accommodation we stayed in during our 2009 skiing club holiday"/>
     </center>
     <div class="container">
     </center>
 <hr>
+<!-- Information about racing using div containers and hero-units -->
     <div class="container">
       <div class="hero-unit">
         <h2>Oval Ski Club Racing Team</h2>
@@ -106,7 +109,6 @@
       <div class="container">
       <div class="hero-unit">
         <h3>Pendle Winter Race League 2012-2013</h3>
-
         Yes it's that time of year again. We are again inviting entries to our Winter Race League held on the 1st Saturday of October, November, December, February and March. All club members are welcome to join!<br> 
         <br>
         The dates of these events are as follows:<br>
@@ -159,6 +161,7 @@
       <hr>
 
       <footer>
+      <!-- Links to Facebook and Twitter -->
       <center>&copy; Oval Ski Club 2012 &nbsp</center>
       <a href="http://www.facebook.com/group.php?gid=2256597544"><img src="../assets/facebooklogo.png" width="55" height="25" title="Like us on Facebook"><a href="https://twitter.com/OvalSki"><img src="../assets/twitter.png" width="55" height="25" title="Follow us on Twitter"></a></a>
       </footer>
@@ -180,5 +183,7 @@ e.stopPropagation();
 </script>
 
 
-  </body>
+<%=yield%>
+
+</body>
 </html>

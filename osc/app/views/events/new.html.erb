@@ -1,6 +1,35 @@
+<div class = "container">
 <%- model_class = Event -%>
 <div class="page-header">
   <h1><%=t '.title', :default => t('helpers.titles.new', :model => model_class.model_name.human,
                                  :default => "New #{model_class.model_name.human}") %></h1>
 </div>
 <%= render :partial => 'form' %>
+
+<hr>
+      <footer>
+      <!-- Links to Facebook and Twitter -->
+      <center>&copy; Oval Ski Club 2012 &nbsp</center>
+      <a href="http://www.facebook.com/group.php?gid=2256597544"><img src="../assets/facebooklogo.png" width="55" height="25" title="Like us on Facebook"><a href="https://twitter.com/OvalSki"><img src="../assets/twitter.png" width="55" height="25" title="Follow us on Twitter"></a></a>
+      </footer>
+    </div>
+
+    <script text/javascript src="assets/js/jquery-1.8.2.min.js"></script>
+    <script text/javascript src="assets/js/bootstrap.min.js"></script>
+
+  </body>
+</html>
+
+
+<script text/javascript src="../assets/jquery-1.8.2.min.js"></script>
+<script text/javascript src="../assets/bootstrap.min.js"></script>
+<script text/javascript src="assets/js/jquery-1.8.2.min.js"></script>
+<script text/javascript src="assets/js/bootstrap.min.js"></script>
+<script>
+$(function(){
+$('.dropdown-toggle').dropdown();
+$('.dropdown input, .dropdown label').click(function (e) {
+e.stopPropagation();
+});
+});
+</script>

@@ -1,14 +1,90 @@
 <!DOCTYPE html>
 <html>
 <head>
-  <title>Oval Ski Club</title>
+
   <%= stylesheet_link_tag    "application", :media => "all" %>
   <%= javascript_include_tag "application" %>
   <%= csrf_meta_tags %>
+
+  <link href="../assets/bootstrap.css" rel="stylesheet">
+  <link href="../assets/mycustomcss.css" rel="stylesheet">
+  <style type="text/css">
+  body
+  {
+    padding-top: 60px;
+    padding-bottom: 40px;
+  }
+  </style>
+  <link href="assets/css/bootstrap-responsive.css" rel="stylesheet">
 </head>
 <body>
+<!-- Navigation Bar Coding -->
+<body>
+    <div id="navigation">
+    <div class="navbar navbar-inverse navbar-fixed-top">
+      <div class="navbar-inner">
+        <div class="container">
+          <a class="btn btn-navbar" data-toggle="collapse" data-target=".nav-collapse">
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+          </a>
+          <a class="brand" href="../welcome/index" >Oval Ski Club</a>
+          <div class="nav-collapse collapse">
+            <ul class="nav">
+              <li><a href="../welcome/about" >About Us</a></li>
+              <li class="dropdown">
+                <a href="#" class="dropdown-toggle" data-toggle="dropdown" >Join In <b class="caret"></b></a>
+                <ul class="dropdown-menu">
+                  <li><a href="../welcome/events" >Club Sessions</a></li>
+                  <li><a href="../welcome/holidays" >Club Holidays</a></li>
+                  <li><a href="../welcome/social" >Social Activities</a></li>
+                  <li><a href="../welcome/racing" >Racing Team</a></li>
+                  <li><a href="../events" >Events</a></li>
+                </ul>
+               </li>
+               <li class="dropdown">
+                <a href="#" class="dropdown-toggle" data-toggle="dropdown" >Information <b class="caret"></b></a>
+                <ul class="dropdown-menu">
+                  <li><a href="../welcome/faq" >FAQ</a></li>
+                  <li><a href="../welcome/contact" >Contact Us</a></li>
+                </ul>
+                <li><a href="../announcements" >Announcements</a></li>
+               </li>
+                </div>
+            </ul>
+            </li>
+            </ul>
+            <!-- Navigation Bar Login Form -->
+            <form class="navbar-form pull-right">
+              <input class="span2" type="text" placeholder="Email">
+              <input class="span2" type="password" placeholder="Password">
+              <a href="index" class="btn">Sign In</a>
+            </form>
+            </div>
+        </div>
+      </div>
+    </div>
+    </div>
 
+<div class ="containter">
+<% flash.notice %></p>
 <%= yield %>
+
+
+
+<script text/javascript src="../assets/jquery-1.8.2.min.js"></script>
+<script text/javascript src="../assets/bootstrap.min.js"></script>
+<script text/javascript src="assets/js/jquery-1.8.2.min.js"></script>
+<script text/javascript src="assets/js/bootstrap.min.js"></script>
+<script>
+$(function(){
+$('.dropdown-toggle').dropdown();
+$('.dropdown input, .dropdown label').click(function (e) {
+e.stopPropagation();
+});
+});
+</script>
 
 </body>
 </html>

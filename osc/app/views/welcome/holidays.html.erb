@@ -2,24 +2,23 @@
 <html lang="en">
   <head>
     <meta charset="utf-8">
-    
-    <title>About Us</title>
+    <title>Oval Ski Club | Club Holidays</title>
     <%= stylesheet_link_tag    "application", :media => "all" %>
     <%= javascript_include_tag "application" %>
     <%= csrf_meta_tags %>
-
+    <!--custom css file and bootstrap are imported below -->
     <link href="../assets/bootstrap.css" rel="stylesheet">
     <link href="../assets/mycustomcss.css" rel="stylesheet">
-
     <style type="text/css">
       body
       {
-      
+      padding-top: 60px;
+      padding-bottom: 40px;
       }
     </style>
     <link href="assets/css/bootstrap-responsive.css" rel="stylesheet">
   </head>
-
+  <!-- Navigation Bar Coding -->
   <body>
     <div id="navigation">
     <div class="navbar navbar-inverse navbar-fixed-top">
@@ -41,6 +40,7 @@
                   <li><a href="holidays" >Club Holidays</a></li>
                   <li><a href="social" >Social Activities</a></li>
                   <li><a href="racing" >Racing Team</a></li>
+                  <li><a href="../events" >Events</a></li>
                 </ul>
                </li>
                <li class="dropdown">
@@ -49,12 +49,13 @@
                   <li><a href="faq" >FAQ</a></li>
                   <li><a href="contact" >Contact Us</a></li>
                 </ul>
-                <li><a href="events" >Announcements</a></li>
+                <li><a href="../announcements" >Announcements</a></li>
                </li>
                 </div>
             </ul>
             </li>
             </ul>
+            <!-- Login Form -->
             <form class="navbar-form pull-right">
               <input class="span2" type="text" placeholder="Email">
               <input class="span2" type="password" placeholder="Password">
@@ -64,6 +65,7 @@
     </div>
     </div>
     </div>
+    <!-- Coding for Image Carousel -->
     <div class="container">
     <div id="myCarousel" class="carousel slide">
   <div class="carousel-inner">
@@ -86,6 +88,7 @@
   <a class="carousel-control right" href="#myCarousel" data-slide="next">&rsaquo;</a>
 </div>
 <hr>
+<!-- Information about the club holiday using div containers and hero-units -->
     <div class="container">
       <div class="hero-unit">
         <h2>Club Holiday 2012-13</h2>
@@ -100,6 +103,7 @@
         
         Feel free to click on the links provided below to view or request a holiday brochure for the holiday destinations mentioned above:<br>
         <br>
+        <!-- a href links to holiday brochures -->
         <p><a href="http://www.espritski.com/about/brochure/">St.Anton 1</a></p>
         <p><a href="http://www.markwarner.co.uk/brochure-request">St.Anton 2</a></p>
         <p><a href="http://www.elegantresorts.co.uk/members/e-brochures">St.Christoph 1</a></p>
@@ -115,6 +119,7 @@
       <hr>
 
       <footer>
+      <!-- Links to Facebook and Twitter -->
       <center>&copy; Oval Ski Club 2012 &nbsp</center>
       <a href="http://www.facebook.com/group.php?gid=2256597544"><img src="../assets/facebooklogo.png" width="55" height="25" title="Like us on Facebook"><a href="https://twitter.com/OvalSki"><img src="../assets/twitter.png" width="55" height="25" title="Follow us on Twitter"></a></a>
       </footer>
@@ -135,5 +140,8 @@ e.stopPropagation();
 });
 </script>
 
-  </body>
+
+<%=yield%>
+
+</body>
 </html>
