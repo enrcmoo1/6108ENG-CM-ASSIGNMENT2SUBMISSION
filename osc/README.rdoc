@@ -2,6 +2,12 @@ Instructional Oval Ski Club Website User Guide
 
 This is an instructional guide on how to efficiently use the Oval Ski Club website inside this repository that has been built using ruby on rails.
 
+Oval Ski Club are a voluntary organisation based in Bebington, Wirral. 
+Oval Ski Club offer skiing tuition for all ages and also run an active social club promoting various events through out the year, and also a Ski Racing Team which all members are welcome to join. 
+They are ideally located for the Wirral, Cheshire, Liverpool and Merseyside areas.
+
+This website enables users to check the latest events of Oval Ski Club and also sign up for membership or club events if they wish to do so.
+
 If you wish to download this repository, navigate back to the osc folder and type the given command for either HTTP, SSH or Git Read-Only.
 You can also click on the ZIP option which downloads this repository as a zipped folder which requires the files to be extracted.
 
@@ -11,7 +17,7 @@ From this, you will be able to use the terminal efficiently and be able to run t
 Check you are in the correct directory by typing "pwd" into the terminal, if not, type "ls" and press enter.
 From this, a number of folders may appear depending on your system. Simply find the correct folder and type cd followed a space and the folder name.
 
-The website contains 10 pages and these are as follows:
+The website contains 10 pages in total and these are as follows:
 
 - Index
 - About Us
@@ -21,8 +27,8 @@ The website contains 10 pages and these are as follows:
 - Racing Team
 - Contact Us
 - FAQ
-- Announcements
-- Events
+- Announcements ()
+- Events ()
 
 localhost:3000/welcome/index <---- URL for home page
 
