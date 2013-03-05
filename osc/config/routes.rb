@@ -1,10 +1,5 @@
 Osc::Application.routes.draw do
-
-  resources :announcements
-
-
   root :to => 'welcome#index'
-  
 
   get 'welcome/index'
   get 'welcome/about'
@@ -14,10 +9,12 @@ Osc::Application.routes.draw do
   get 'welcome/faq'
   get 'welcome/holidays'
   get 'welcome/racing'
-  get 'welcome/events'
-  get 'welcome/announcements'
 
-
-  resources :events
   resources :announcements
+  resources :events
+  resources :authors
+  resources :author_sessions, only: [ :new, :create, :destroy]
+
+  match 'login' => 'author_sessions#new'
+  match 'logout' => 'author_sessions#destroy'
 end
