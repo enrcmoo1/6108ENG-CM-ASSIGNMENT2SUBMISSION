@@ -1,4 +1,7 @@
 Osc::Application.routes.draw do
+  resources :statuses
+
+
   root :to => 'welcome#index'
 
   get 'welcome/index'

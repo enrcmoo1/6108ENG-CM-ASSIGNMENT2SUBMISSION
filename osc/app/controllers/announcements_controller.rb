@@ -3,11 +3,6 @@ class AnnouncementsController < ApplicationController
   # GET /announcements.json
   def index
     @announcements = Announcement.all
-
-    respond_to do |format|
-      format.html # index.html.erb
-      format.json { render json: @announcements }
-    end
   end
 
   # GET /announcements/1
